@@ -6,7 +6,7 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=Dlinkrouter Theme
+LUCI_TITLE:=Refresh Theme
 LUCI_DEPENDS:=
 
 include ../../luci.mk
