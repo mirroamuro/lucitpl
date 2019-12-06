@@ -1,6 +1,6 @@
 # OpenWrt luci feed
 
-в╥╪ср╩лвдё╟Е Refresh Theme
+Х©╫Е┼═Д╦─Е╔≈Ф╗║Ф²© Refresh Theme
 
 ## Usage
 
