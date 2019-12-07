@@ -95,21 +95,21 @@
 	local function render_submenu(prefix, node)
 		local childs = disp.node_childs(node)
 		if #childs > 0 then
-			write('<ul class="dropdown-menu">')
+			--write('<ul class="dropdown-menu">')
 
 			for i, r in ipairs(childs) do
 				local nnode = node.nodes[r]
-				write('<li><a href="%s">%s</a></li>' %{
-					nodeurl(prefix, r, nnode.query),
-					pcdata(striptags(translate(nnode.title)))
-				})
+				--write('<li><a href="%s">%s</a></li>' %{
+				--	nodeurl(prefix, r, nnode.query),
+				--	pcdata(striptags(translate(nnode.title)))
+				--})
 				if nnode._menu_selected == true then
 					pagetitle = pcdata(striptags(translate(nnode.title)))
 				end
 			end
 
 
-			write('</ul>')
+			--write('</ul>')
 		end
 	end
 
@@ -128,17 +128,17 @@
 					if nnode.module == 'luci.controller.admin.'..request[2] then
 						pagename = pcdata(striptags(translate(nnode.title)))
 					end
-					write('<li class="dropdown %s"><a class="menu" href="#">%s</a>' %{
-						(nnode.module == 'luci.controller.admin.'..request[2]) and 'active' or '',
-						pcdata(striptags(translate(nnode.title)))
-					})
+					--write('<li class="dropdown %s"><a class="menu" href="#">%s</a>' %{
+					--	(nnode.module == 'luci.controller.admin.'..request[2]) and 'active' or '',
+					--	pcdata(striptags(translate(nnode.title)))
+					--})
 					render_submenu(category .. "/" .. r, nnode)
-					write('</li>')
+					--write('</li>')
 				else
-					write('<li><a href="%s">%s</a></li>' %{
-						nodeurl(category, r, nnode.query),
-						pcdata(striptags(translate(nnode.title)))
-					})
+					--write('<li><a href="%s">%s</a></li>' %{
+					--	nodeurl(category, r, nnode.query),
+					--	pcdata(striptags(translate(nnode.title)))
+					--})
 				end
 			end
 
@@ -213,6 +213,47 @@
 					</span>
 				</div>
 				<% render_topmenu() %>
+				<ul class="nav">
+					<li class="dropdown">
+						<a class="menu" href="#">状态</a>
+						<ul class="dropdown-menu">
+							<li><a href="/cgi-bin/luci/admin/status/overview">总览</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/routes">路由表</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/realtime">实时信息</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/mwan/overview">负载均衡</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/wireless">移动网络</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a class="menu" href="#">基本设置</a>
+						<ul class="dropdown-menu">
+							<li><a href="/cgi-bin/luci/admin/network/network">接口</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/wireless">无线</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/hosts">主机名</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a class="menu" href="#">高级设置</a>
+						<ul class="dropdown-menu">
+							<li><a href="/cgi-bin/luci/admin/network/dhcp">DHCP/DNS</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/routes">静态路由</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/iptables">防火墙</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/qos">QoS</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/mwan/overview">负载均衡</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a class="menu" href="#">系统工具</a>
+						<ul class="dropdown-menu">
+							<li><a href="/cgi-bin/luci/admin/system/system">系统</a></li>
+							<li><a href="/cgi-bin/luci/admin/system/admin">管理权</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/diagnostics">诊断</a></li>
+							<li><a href="/cgi-bin/luci/admin/system/flashops">备份/升级</a></li>
+							<li><a href="/cgi-bin/luci/admin/system/reboot">重启</a></li>
+						</ul>
+					</li>
+					<li><a href="/cgi-bin/luci/admin/logout">退出</a></li>
+				</ul>
 			</div>
 		</div>
 		<%- else %>
@@ -256,7 +297,7 @@
 		%>
 		<div class="page-title clearfix">
 			<div class="img">
-				<img src="/luci-static/dlinkrouter/img/page_<%=request[2]%>_<%=request[3]%>.png"/>
+				<img src="/luci-static/refresh/img/page_<%=request[2]%>_<%=request[3]%>.png"/>
 			</div>
 			<div class="title"><%=pagetitle%></div>
 			<div class="desc">
@@ -271,7 +312,7 @@
 		<%- else -%>
 		<div class="page-title clearfix">
 			<div class="img">
-				<img src="/luci-static/dlinkrouter/img/page_status_mwan.png"/>
+				<img src="/luci-static/refresh/img/page_status_mwan.png"/>
 			</div>
 			<div class="title"><%=pagetitle%></div>
 			<div class="desc">
