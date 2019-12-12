@@ -6,14 +6,18 @@ function index()
 		_("Firewall"), 60)
 
 	entry({"admin", "network", "firewall", "zones"},
-		view("firewall/zones"), _("General Settings"), 10)
+		arcombine(cbi("firewall/zones"), cbi("firewall/zone-details")),
+		_("General Settings"), 10).leaf = true
 
 	entry({"admin", "network", "firewall", "forwards"},
-		view("firewall/forwards"), _("Port Forwards"), 20)
+		arcombine(cbi("firewall/forwards"), cbi("firewall/forward-details")),
+		_("Port Forwards"), 20).leaf = true
 
 	entry({"admin", "network", "firewall", "rules"},
-		view("firewall/rules"), _("Traffic Rules"), 30)
+		arcombine(cbi("firewall/rules"), cbi("firewall/rule-details")),
+		_("Traffic Rules"), 30).leaf = true
 
 	entry({"admin", "network", "firewall", "custom"},
-		view("firewall/custom"), _("Custom Rules"), 40).leaf = true
+		form("firewall/custom"),
+		_("Custom Rules"), 40).leaf = true
 end

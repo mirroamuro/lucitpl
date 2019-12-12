@@ -23,67 +23,6 @@
      </ul>
     <% end %>
    </footer>
-   <% if luci.dispatcher.context.authsession then %>
-   <% if request[2] == 'network' and request[3] == 'network' then%>
-	<script type="text/javascript">
-		window.onload=function(){
-			var lanselect = document.getElementById('cbid.network.lan.proto');
-			if(lanselect){
-				for(var i=0;i<lanselect.length;i++){
-					if(lanselect[i].value != 'static' && lanselect[i].value != 'dhcp' && lanselect[i].value != 'pptp' && lanselect[i].value != 'ppp' && lanselect[i].value != 'l2tp'){
-						lanselect[i].hidden = true;
-					}
-				}
-			}
-			var wan6select = document.getElementById('cbid.network.wan6.proto');
-			if(wan6select){
-				for(var i=0;i<wan6select.length;i++){
-					if(wan6select[i].value != 'dhcpv6' && wan6select[i].value != 'dhcp' && wan6select[i].value != 'pptp' && wan6select[i].value != 'ppp' && wan6select[i].value != 'l2tp'){
-						wan6select[i].hidden = true;
-					}
-				}
-			}
-			var wanselect = document.getElementById('cbid.network.wan.proto');
-			if(wanselect){
-				for(var i=0;i<wanselect.length;i++){
-					if(wanselect[i].value != 'dhcp' && wanselect[i].value != 'pptp' && wanselect[i].value != 'ppp' && wanselect[i].value != 'l2tp'){
-						wanselect[i].hidden = true;
-					}
-				}
-			}
-		}
-    </script>
-   <% end %>
-   <% if request[2] == 'network' and request[3] == 'wireless' then%>
-	<script type="text/javascript">
-		window.onload=function(){
-			var wirelessselect = document.getElementsByClassName('cbi-input-select');
-			if(wirelessselect){
-				for(var i=0;i<wirelessselect.length;i++){
-					var id = wirelessselect[i].id;
-					if(id.search('mode') != -1){
-
-						var modeselect = wirelessselect[i];
-						console.log(modeselect);
-
-						for(var j=0;j<modeselect.length;j++){
-							if(modeselect[j].value != 'ap' && modeselect[j].value != 'sta' && modeselect[j].value != 'ap-wds' && modeselect[j].value != 'sta-wds'){
-								modeselect[j].hidden = true;
-							}
-						}
-					}
-				}
-			}
-		}
-    </script>
-   <% end %>
-   <% else %>
-   <script type="text/javascript">
-		window.onload=function(){
-			document.getElementsByClassName('cbi-map-descr')[0].innerText = '请输入密码';
-		}
-   </script>
-   <% end %>
    </div>
   </div>
  </body>

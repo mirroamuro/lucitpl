@@ -220,7 +220,8 @@
 							<li><a href="/cgi-bin/luci/admin/status/overview">总览</a></li>
 							<li><a href="/cgi-bin/luci/admin/status/routes">路由表</a></li>
 							<li><a href="/cgi-bin/luci/admin/status/realtime">实时信息</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/realtime/wireless">移动网络</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/mwan/overview">负载均衡</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/wireless">移动网络</a></li>
 						</ul>
 					</li>
 					<li class="dropdown ">
@@ -295,17 +296,10 @@
 		if request[3] == 'routes' or request[3] == 'realtime' or request[3] == 'mwan' or request[3] == 'wireless' or request[3] == 'network' or request[3] == 'hosts' or request[3] == 'dhcp' or request[3] == 'diagnostics' or request[3] == 'firewall' or request[3] == 'qos' or request[3] == 'system' or request[3] == 'admin' or request[3] == 'flashops' or request[3] == 'reboot' then
 		%>
 		<div class="page-title clearfix">
-			<% if striptags( node.title ) == 'Wireless' and request[3] == 'realtime' then %>
-			<div class="img">
-				<img src="/luci-static/refresh/img/page_status_wireless.png"/>
-			</div>
-			<div class="title">移动网络</div>
-			<%- else -%>
 			<div class="img">
 				<img src="/luci-static/refresh/img/page_<%=request[2]%>_<%=request[3]%>.png"/>
 			</div>
 			<div class="title"><%=pagetitle%></div>
-			<%- end -%>
 			<div class="desc">
 				<% if request[3] == 'routes' then%><%:The following rules are currently active on this system.%><%-end-%>
 				<% if request[3] == 'realtime' then%><%:This page gives an overview over currently active network connections.%><%-end-%>

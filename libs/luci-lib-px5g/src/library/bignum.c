@@ -720,7 +720,7 @@ cleanup:
 }
 
 /*
- * Helper for mpi subtraction
+ * Helper for mpi substraction
  */
 static void mpi_sub_hlp( int n, t_int *s, t_int *d )
 {
@@ -741,7 +741,7 @@ static void mpi_sub_hlp( int n, t_int *s, t_int *d )
 }
 
 /*
- * Unsigned subtraction: X = |A| - |B|  (HAC 14.9)
+ * Unsigned substraction: X = |A| - |B|  (HAC 14.9)
  */
 int mpi_sub_abs( mpi *X, mpi *A, mpi *B )
 {
@@ -809,7 +809,7 @@ cleanup:
 }
 
 /*
- * Signed subtraction: X = A - B
+ * Signed substraction: X = A - B
  */
 int mpi_sub_mpi( mpi *X, mpi *A, mpi *B )
 {
@@ -856,7 +856,7 @@ int mpi_add_int( mpi *X, mpi *A, int b )
 }
 
 /*
- * Signed subtraction: X = A - b
+ * Signed substraction: X = A - b
  */
 int mpi_sub_int( mpi *X, mpi *A, int b )
 {

@@ -130,6 +130,7 @@ function action_neigh(json)
 	local devices  = ntm:get_wifidevs()
 	local sys = require "luci.sys"
 	local assoclist = {}
+	--local neightbl = require "neightbl"
 	local ntm = require "luci.model.network"
 	local ipc = require "luci.ip"
 	local nxo = require "nixio"
@@ -378,9 +379,9 @@ function fetch_jsoninfo(otable)
 
 	if jsonreq4 ~= "" then
 		has_v4 = 1
-		jsondata4 = json.decode(jsonreq4) or {}
+		jsondata4 = json.decode(jsonreq4)
 		if otable == 'status' then
-			data4 = jsondata4
+			data4 = jsondata4 or {}
 		else
 			data4 = jsondata4[otable] or {}
 		end
@@ -392,9 +393,9 @@ function fetch_jsoninfo(otable)
 	end
 	if jsonreq6 ~= "" then
 		has_v6 = 1
-		jsondata6 = json.decode(jsonreq6) or {}
+		jsondata6 = json.decode(jsonreq6)
 		if otable == 'status' then
-			data6 = jsondata6
+			data6 = jsondata6 or {}
 		else
 			data6 = jsondata6[otable] or {}
 		end

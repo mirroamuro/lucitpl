@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for Watchcat
-LUCI_DEPENDS:=+luci-compat +watchcat
+LUCI_DEPENDS:=+watchcat
 
 include ../../luci.mk
 
