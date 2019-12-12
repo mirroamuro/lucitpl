@@ -420,3 +420,9 @@ html body.apply-overlay-active{height:calc(100vh - 63px)}
 .user-login-box .input-box{margin-top:10px}
 .user-login-box .btn-box{margin-top:30px}
 .user-login-box .btn-box input{background:#4598aa;color:#fff;padding:10px 15px;min-width:120px}
+
+.page_status_overview .cbi-section:nth-child(7) .table .tr:nth-child(2),
+.page_status_overview .cbi-section:nth-child(7) .table .tr:nth-child(3),
+.page_status_overview .cbi-section:nth-child(7) .table .tr:nth-child(4)
+{display:none;}
+
