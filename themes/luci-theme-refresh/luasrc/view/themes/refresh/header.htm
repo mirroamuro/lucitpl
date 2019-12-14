@@ -215,43 +215,43 @@
 				<% render_topmenu() %>
 				<ul class="nav">
 					<li class="dropdown">
-						<a class="menu" href="#">状态</a>
+						<a class="menu" href="#"><%:Status%></a>
 						<ul class="dropdown-menu">
-							<li><a href="/cgi-bin/luci/admin/status/overview">总览</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/routes">路由表</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/realtime">实时信息</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/realtime/wireless">移动网络</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/overview"><%:Overview%></a></li>
+							<li><a href="/cgi-bin/luci/admin/status/routes"><%:Routes%></a></li>
+							<li><a href="/cgi-bin/luci/admin/status/realtime"><%:Realtime Graphs%></a></li>
+							<li><a href="/cgi-bin/luci/admin/status/mobile"><%:Mobile network%></a></li>
 						</ul>
 					</li>
 					<li class="dropdown ">
-						<a class="menu" href="#">基本设置</a>
+						<a class="menu" href="#"><%:General Settings%></a>
 						<ul class="dropdown-menu">
-							<li><a href="/cgi-bin/luci/admin/network/network">接口</a></li>
-							<li><a href="/cgi-bin/luci/admin/network/wireless">无线</a></li>
-							<li><a href="/cgi-bin/luci/admin/network/hosts">主机名</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/network"><%:Interface%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/wireless"><%:Wireless%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/hosts"><%:Hostname%></a></li>
 						</ul>
 					</li>
 					<li class="dropdown ">
-						<a class="menu" href="#">高级设置</a>
+						<a class="menu" href="#"><%:Advanced Settings%></a>
 						<ul class="dropdown-menu">
-							<li><a href="/cgi-bin/luci/admin/network/dhcp">DHCP/DNS</a></li>
-							<li><a href="/cgi-bin/luci/admin/network/routes">静态路由</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/iptables">防火墙</a></li>
+							<li><a href="/cgi-bin/luci/admin/network/dhcp"><%:DHCP and DNS%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/routes"><%:Static Routes%></a></li>
+							<li><a href="/cgi-bin/luci/admin/status/iptables"><%:Firewall%></a></li>
 							<li><a href="/cgi-bin/luci/admin/network/qos">QoS</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/mwan/overview">负载均衡</a></li>
+							<li><a href="/cgi-bin/luci/admin/status/mwan/overview"><%:Load Balancing%></a></li>
 						</ul>
 					</li>
 					<li class="dropdown ">
-						<a class="menu" href="#">系统工具</a>
+						<a class="menu" href="#"><%:System tools%></a>
 						<ul class="dropdown-menu">
-							<li><a href="/cgi-bin/luci/admin/system/system">系统</a></li>
-							<li><a href="/cgi-bin/luci/admin/system/admin">管理权</a></li>
-							<li><a href="/cgi-bin/luci/admin/network/diagnostics">诊断</a></li>
-							<li><a href="/cgi-bin/luci/admin/system/flashops">备份/升级</a></li>
-							<li><a href="/cgi-bin/luci/admin/system/reboot">重启</a></li>
+							<li><a href="/cgi-bin/luci/admin/system/system"><%:System%></a></li>
+							<li><a href="/cgi-bin/luci/admin/system/admin"><%:Administration%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/diagnostics"><%:Diagnostics%></a></li>
+							<li><a href="/cgi-bin/luci/admin/system/flashops"><%:Backup / Flash Firmware%></a></li>
+							<li><a href="/cgi-bin/luci/admin/system/reboot"><%:Reboot%></a></li>
 						</ul>
 					</li>
-					<li><a href="/cgi-bin/luci/admin/logout">退出</a></li>
+					<li><a href="/cgi-bin/luci/admin/logout"><%:Logout%></a></li>
 				</ul>
 			</div>
 		</div>
@@ -262,9 +262,9 @@
 					<%=boardinfo.hostname or "?"%>
 				</a>
 				<div class="header-version">
-					<span>型号名称：MWR091</span>
-					<span>硬件版本：A1</span>
-					<span>固件版本：18.06.04</span>
+					<span><%:Model name%>：MWR091</span>
+					<span><%:Hardware version%>：A1</span>
+					<span><%:Firmware version%>：18.06.04</span>
 				</div>
 			</div>
 		</div>
@@ -299,7 +299,7 @@
 			<div class="img">
 				<img src="/luci-static/refresh/img/page_status_wireless.png"/>
 			</div>
-			<div class="title">移动网络</div>
+			<div class="title"><%:Mobile network%></div>
 			<%- else -%>
 			<div class="img">
 				<img src="/luci-static/refresh/img/page_<%=request[2]%>_<%=request[3]%>.png"/>
@@ -313,7 +313,17 @@
 			</div>
 		</div>
 		<div class="page-path">
-			<%=pagename%> >> <%=pagetitle%>
+			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos') then%>
+			<%:Advanced Settings%>
+			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
+			<%:Advanced Settings%>
+			<% elseif request[3] == 'diagnostics' then%>
+			<%:System%>
+			<% elseif request[2] == 'network' then%>
+			<%:General Settings%>
+			<% else %>
+			<%=pagename%>
+			<% end %> >> <%=pagetitle%>
 		</div>
 		<%- else -%>
 		<div class="page-title clearfix">
@@ -326,7 +336,17 @@
 			</div>
 		</div>
 		<div class="page-path">
-			<%=pagename%> >> <%=pagetitle%>
+			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos') then%>
+			<%:Advanced Settings%>
+			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
+			<%:Advanced Settings%>
+			<% elseif request[3] == 'diagnostics' then%>
+			<%:System%>
+			<% elseif request[2] == 'network' then%>
+			<%:General Settings%>
+			<% else %>
+			<%=pagename%>
+			<% end %> >> <%=pagetitle%>
 		</div>
 		<%- end -%>
 		<%- end -%>

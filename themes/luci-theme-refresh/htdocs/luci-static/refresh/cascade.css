@@ -149,7 +149,7 @@ header .nav .menu{margin:0 10px;border-radius:8px}
 header ul .menu-dropdown li a,header ul .dropdown-menu li a{padding:16px 15px}
 li.menu,.dropdown{position:relative}
 a.menu:after,.dropdown-toggle:after{width:0;height:0;display:inline-block;content:"&darr;";text-indent:-99999px;vertical-align:top;margin-top:8px;margin-left:4px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000;opacity:0.5}
-.menu-dropdown,.dropdown-menu{background:url('icons/menu_this.png') no-repeat;background-size:100%;float:left;top:40px;left:-9999px;z-index:900;min-width:150px;max-width:220px;_width:160px;margin-left:0;margin-right:0;padding:10px 0 0 0;zoom:1;border-radius:0;box-shadow:7px 15px 15px rgba(0,0,0,0.5);background-clip:padding-box;margin-top:26px;display:none}
+.menu-dropdown,.dropdown-menu{background:url('icons/menu_this.png') no-repeat;background-size:100%;float:left;top:40px;left:-9999px;z-index:900;min-width:150px;max-width: 130px;_width:160px;margin-left:0;margin-right:0;padding:10px 0 0 0;zoom:1;border-radius:0;box-shadow:7px 15px 15px rgba(0,0,0,0.5);background-clip:padding-box;margin-top:26px;display:none;}
 .menu-dropdown li,.dropdown-menu li{float:none;display:block;background-color:#fff}
 .menu-dropdown .divider,.dropdown-menu .divider{height:1px;margin:5px 0;overflow:hidden;background-color:#eee;border-bottom:1px solid #fff}
 header .dropdown-menu a,.dropdown-menu a{display:block;padding:4px 15px;clear:both;font-weight:normal;line-height:18px;color:#808080;text-shadow:0 1px 0 #fff}
@@ -169,10 +169,10 @@ header .dropdown-menu a:hover,.dropdown-menu a:hover,header .dropdown-menu a.hov
 .cbi-tabmenu.map{margin:0}
 .cbi-tabmenu.map > li{font-size:16.5px;font-weight:bold}
 .cbi-tabcontainer > fieldset.cbi-section[id] > legend{display:none}
-.tabs > li > a,.cbi-tabmenu > li > a{padding:0 10px;border-radius:0;font-size:18px;border:1px solid #ccc;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa}
+.tabs > li > a,.cbi-tabmenu > li > a{padding:0 10px;border-radius:0;font-size: 20px;border:1px solid #ccc;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa;text-align:center;min-width: 140px;}
 .tabs > li:last-child > a,.cbi-tabmenu > li:last-child > a{border-right:1px solid #ddd}
 .tabs > li > a:hover,.cbi-tabmenu > li > a:hover{text-decoration:none}
-.tabs .active > a,.tabs .active > a:hover,.cbi-tabmenu .active > a,.cbi-tabmenu .active > a:hover,.cbi-tab > a:link,.cbi-tab > a:hover{border-bottom-color:transparent;cursor:default;border-bottom:1px solid #ffff;text-decoration:none}
+.tabs .active > a,.tabs .active > a:hover,.cbi-tabmenu .active > a,.cbi-tabmenu .active > a:hover,.cbi-tab > a:link,.cbi-tab > a:hover{border-bottom-color:transparent;cursor:default;border-bottom:1px solid #ffff;text-decoration:none;}
 .tabs .menu-dropdown,.tabs .dropdown-menu,.cbi-tabmenu .menu-dropdown,.cbi-tabmenu .dropdown-menu{top:35px;border-width:1px;border-radius:0 6px 6px 6px}
 .tabs a.menu:after,.tabs .dropdown-toggle:after,.cbi-tabmenu a.menu:after,.cbi-tabmenu .dropdown-toggle:after{border-top-color:#999;margin-top:15px;margin-left:5px}
 .tabs li.open.menu .menu,.tabs .open.dropdown .dropdown-toggle,.cbi-tabmenu li.open.menu .menu,.cbi-tabmenu .open.dropdown .dropdown-toggle{border-color:#999}
@@ -414,11 +414,13 @@ html body.apply-overlay-active{height:calc(100vh - 63px)}
 
 .page_login_main form{width:337px;height:218px;margin:30px auto 155px;background:url('icons/logInTable.png') left top no-repeat;text-align:center;overflow:hidden}
 .page_login_main .cbi-value-title, .page_login_main form .cbi-value,.page_login_main .cbi-button-reset,.page_login_main h2[name="content"]{display:none;}
-.page_login_main form .cbi-value-last{display:block;margin-top:10px;margin-bottom:0;}
+.page_login_main form .cbi-value-last{display:block;margin-top: 5px;margin-bottom:0;padding: 0;}
 .page_login_main form .input, .page_login_main form .cbi-value-field{margin:0;}
 .page_login_main .actions, .page_login_main .cbi-page-actions {background: none;margin-bottom: 0;padding: 0;border-top: none;border-radius: 0;text-align: center;}
-.page_login_main .cbi-button-apply{background:#4598aa;color:#fff;padding:10px 15px;min-width:120px;margin-top:30px}
-.page_login_main .cbi-map-descr{font-size:14px;color:#333;font-weight:bold;height:40px;line-height:40px;margin-top:30px;}
+.page_login_main .cbi-button-apply{background:#4598aa;color:#fff;padding:10px 15px;min-width:120px;margin-top: 20px;}
+.page_login_main .cbi-map-descr{font-size:14px;color:#333;font-weight:bold;height:40px;line-height:40px;margin-top: 10px;padding: 0;background: no-repeat;border: none;margin-bottom: 0;}
+.page_login_main form .cbi-value{display:block;padding: 10px 0 0 0;}
+.page_login_main .cbi-page-actions{margin-top:0;}
 
 .user-login-box .input-box{margin-top:10px}
 .user-login-box .btn-box{margin-top:30px}
@@ -434,7 +436,7 @@ html body.apply-overlay-active{height:calc(100vh - 63px)}
 .page_status_overview .cbi-section h3{margin-bottom:10px;}
 
 h2[name="content"]{display:none;}
-.cbi-tabmenu > li > a{font-size:16px;height: 38px;line-height:40px;text-decoration: none;}
+.cbi-tabmenu > li > a{/* font-size:16px; *//* height: 38px; *//* line-height:40px; */text-decoration: none;}
 .cbi-tabmenu > li:first-child > a{/* border-radius:8px 0 0 0; */}
 .cbi-tabmenu > li:last-child > a{/* border-radius:0 8px 0 0; */}
 

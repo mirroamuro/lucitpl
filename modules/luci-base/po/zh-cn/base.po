@@ -3974,6 +3974,24 @@ msgstr "是"
 msgid "« Back"
 msgstr "« 后退"
 
+msgid "Model name"
+msgstr "型号名称"
+
+msgid "Hardware version"
+msgstr "硬件版本"
+
+msgid "Firmware version"
+msgstr "固件版本"
+
+msgid "Mobile network"
+msgstr "移动网络"
+
+msgid "System tools"
+msgstr "系统工具"
+
+msgid "Diagnosis"
+msgstr "诊断"
+
 #~ msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 #~ msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
