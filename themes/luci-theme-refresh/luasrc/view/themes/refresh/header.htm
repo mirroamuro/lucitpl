@@ -117,7 +117,7 @@
 		local childs = disp.node_childs(cattree)
 
 		if #childs > 0 then
-			write('<ul class="nav">')
+			--write('<ul class="nav">')
 
 			for i, r in ipairs(childs) do
 				local nnode = cattree.nodes[r]
@@ -142,7 +142,7 @@
 				end
 			end
 
-			write('</ul>')
+			--write('</ul>')
 		end
 	end
 
@@ -318,9 +318,11 @@
 			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
 			<%:Advanced Settings%>
 			<% elseif request[3] == 'diagnostics' then%>
-			<%:System%>
+			<%:System tools%>
 			<% elseif request[2] == 'network' then%>
 			<%:General Settings%>
+			<% elseif request[2] == 'system' then%>
+			<%:System tools%>
 			<% else %>
 			<%=pagename%>
 			<% end %> >> <%=pagetitle%>
@@ -336,14 +338,16 @@
 			</div>
 		</div>
 		<div class="page-path">
-			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos') then%>
+			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos' or request[3] == 'mwan') then%>
 			<%:Advanced Settings%>
 			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
 			<%:Advanced Settings%>
 			<% elseif request[3] == 'diagnostics' then%>
-			<%:System%>
+			<%:System tools%>
 			<% elseif request[2] == 'network' then%>
 			<%:General Settings%>
+			<% elseif request[2] == 'system' then%>
+			<%:System tools%>
 			<% else %>
 			<%=pagename%>
 			<% end %> >> <%=pagetitle%>
