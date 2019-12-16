@@ -238,7 +238,7 @@
 							<li><a href="/cgi-bin/luci/admin/network/routes"><%:Static Routes%></a></li>
 							<li><a href="/cgi-bin/luci/admin/status/iptables"><%:Firewall%></a></li>
 							<li><a href="/cgi-bin/luci/admin/network/qos">QoS</a></li>
-							<li><a href="/cgi-bin/luci/admin/status/mwan/overview"><%:Load Balancing%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/mwan"><%:Load Balancing%></a></li>
 						</ul>
 					</li>
 					<li class="dropdown ">
@@ -313,7 +313,7 @@
 			</div>
 		</div>
 		<div class="page-path">
-			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos') then%>
+			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos' or request[3] == 'mwan') then%>
 			<%:Advanced Settings%>
 			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
 			<%:Advanced Settings%>

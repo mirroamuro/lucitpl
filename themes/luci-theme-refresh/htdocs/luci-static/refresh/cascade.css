@@ -232,7 +232,7 @@ footer{margin-top: 50px;padding-top:20px;background:url('icons/footer.png') cent
 input[type="text"] + .cbi-button,input[type="password"] + .cbi-button,select + .cbi-button{border-color:#4598aa;margin:0 0 1px -2px;padding:0 6px;vertical-align:top;/* height:32px; */font-size:14px;font-weight:bold;line-height:30px;background:#fff;text-shadow:none;color:#4598aa;border-radius: 0;}
 select + .cbi-button{border-left-color:transparent}
 .cbi-title-ref{color:#37/*ccolor:#fff;*/}
-.cbi-title-ref::after {content: "âž™";}
+.cbi-title-ref::after {/*content: "âž™";*/}
 .cbi-tooltip-container{cursor:help}
 .cbi-tooltip{position:absolute;z-index:1000;left:-1000px;opacity:0;transition:opacity .25s ease-out}
 .cbi-tooltip-container:hover .cbi-tooltip:not(:empty){left:auto;opacity:1;transition:opacity .25s ease-in}
@@ -436,7 +436,7 @@ html body.apply-overlay-active{height:calc(100vh - 63px)}
 .page_status_overview .cbi-section h3{margin-bottom:10px;}
 
 h2[name="content"]{display:none;}
-.cbi-tabmenu > li > a{/* font-size:16px; *//* height: 38px; *//* line-height:40px; */text-decoration: none;}
+.cbi-tabmenu > li > a{font-size:16px;height: 38px; line-height:40px;text-decoration: none;}
 .cbi-tabmenu > li:first-child > a{/* border-radius:8px 0 0 0; */}
 .cbi-tabmenu > li:last-child > a{/* border-radius:0 8px 0 0; */}
 
@@ -469,3 +469,10 @@ embed{border:1px solid #ddd !important;}
 .page_system_admin .cbi-section-node{margin:20px 0;}
 
 #cbi-dropbear-_keys .td{padding:0}
+
+#cbi-mwan3-wan{border:1px solid #ddd;padding:10px 20px}
+
+.page_network_mwan .tabs a{min-width:100px;}
+
+.page_status_iptables .cbi-tabmenu{position:absolute;top:192px;right:0}
+.page_status_iptables .cbi-tabmenu a{padding:0 10px;border-radius:0;font-size: 20px;border:1px solid #ccc;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa;text-align:center;min-width: 140px;}
