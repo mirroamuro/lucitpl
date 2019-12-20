@@ -237,7 +237,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/cgi-bin/luci/admin/network/dhcp"><%:DHCP and DNS%></a></li>
 							<li><a href="/cgi-bin/luci/admin/network/routes"><%:Static Routes%></a></li>
-							<li><a href="/cgi-bin/luci/admin/status/iptables"><%:Firewall%></a></li>
+							<li><a href="/cgi-bin/luci/admin/network/firewall"><%:Firewall%></a></li>
 							<li><a href="/cgi-bin/luci/admin/network/qos">QoS</a></li>
 							<li><a href="/cgi-bin/luci/admin/network/mwan"><%:Load Balancing%></a></li>
 						</ul>
@@ -316,7 +316,7 @@
 		<div class="page-path">
 			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos' or request[3] == 'mwan') then%>
 			<%:Advanced Settings%>
-			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
+			<% elseif request[2] == 'status' and (request[3] == 'iptables') then%>
 			<%:Advanced Settings%>
 			<% elseif request[3] == 'diagnostics' then%>
 			<%:System tools%>
@@ -341,7 +341,7 @@
 		<div class="page-path">
 			<% if request[2] == 'network' and (request[3] == 'dhcp' or request[3] == 'routes' or request[3] == 'qos' or request[3] == 'mwan') then%>
 			<%:Advanced Settings%>
-			<% elseif request[2] == 'status' and (request[3] == 'mwan' or request[3] == 'iptables') then%>
+			<% elseif request[2] == 'status' and (request[3] == 'iptables') then%>
 			<%:Advanced Settings%>
 			<% elseif request[3] == 'diagnostics' then%>
 			<%:System tools%>

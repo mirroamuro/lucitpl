@@ -3,9 +3,76 @@ header h3 a, header .brand {
 }
 
 @media screen and (max-device-width: 600px) {
-	#maincontent.container {
-		margin-top: 30px;
+	body{
+    	background-position: 0 -35px !important;
 	}
+	header{height:71px;}
+	header .container{
+		padding:0;
+		height: 60px;
+	}
+	header div > ul, .nav{
+		font-size: 13px;
+		position: inherit;
+		width: 100%;
+		top: 16px;
+		float: none;
+		white-space: nowrap;
+	}
+	header div > ul > li, .nav > li{/* width:20% */padding-right: 10px;padding-left: 10px;display: inline-block;float: none;}
+	header div > ul a, .nav a{
+		width: 100%;
+		min-width: 0;
+		margin: 0;
+		padding: 5px 10px 5px 0;
+	}
+	header .nav .menu{
+		margin: 0;
+	}
+	.menu-dropdown, .dropdown-menu{
+		width:50px;
+		min-width: 0;
+		position: absolute;
+		width: 120%;
+		left: -10%;
+		top: 100%;
+	}
+	header ul .menu-dropdown li a, header ul .dropdown-menu li a{
+		padding:0
+	}
+	header ul .dropdown-menu li a{
+		padding:6px 0;
+		white-space: normal;
+	}
+	header div > ul > li:before, .nav > li:before{display:none;}
+	a.menu:after, .dropdown-toggle:after{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		top: 50%;
+		margin-top: -3px;
+	}
+	.tabs > li > a, .cbi-tabmenu > li > a{
+		min-width: 0;
+		font-size: 13px;
+	}
+	form .cbi-value label.cbi-value-title{width:100px;}
+	form .input, form .cbi-value-field{margin-left:120px;}
+	.page-title .title{font-size:18px;font-weight:bold;margin-top:60px;}
+	.page-title .desc{font-size:14px;}
+	.table .th{font-size:13px;}
+	.table .td{font-size:12px;/*word-break: break-all;*/}
+	.page_status_iptables .cbi-tabmenu a, .page_status_mwan .cbi-tabmenu a{
+		min-width: 0;
+		font-size: 13px;
+	}
+	.page-path{font-size:15px;}
+	.page_network_firewall .tabs > li > a{padding:0 3px;font-size:12px;}
+	.page_network_mwan .tabs a{width:auto;padding:0 6px;font-size: 2px;min-width:0;}
+
+	.page_network_mwan .tabs{left:0;top:250px;}
+	.page_network_mwan .page-path{margin-bottom:80px;}
 }
 
 @media screen and (max-device-width: 360px) {

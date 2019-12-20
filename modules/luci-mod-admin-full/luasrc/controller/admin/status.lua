@@ -33,8 +33,10 @@ function index()
 	entry({"admin", "status", "realtime", "connections_status"}, call("action_connections")).leaf = true
 
 	entry({"admin", "status", "nameinfo"}, call("action_nameinfo")).leaf = true
-
-	entry({"admin", "status", "mobile"}, template("admin_status/mobile"), _("Mobile network"), 7).leaf = true
+	
+	if luci.config.main.mediaurlbase == '/luci-static/refresh' then
+		entry({"admin", "status", "mobile"}, template("admin_status/mobile"), _("Mobile network"), 7).leaf = true
+	end
 
 end
 

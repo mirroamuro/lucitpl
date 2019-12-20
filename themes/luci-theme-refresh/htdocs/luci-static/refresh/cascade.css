@@ -472,7 +472,7 @@ embed{border:1px solid #ddd !important;}
 
 #cbi-mwan3-wan{border:1px solid #ddd;padding:10px 20px}
 
-.page_network_mwan .tabs a{min-width:100px;}
+.page_network_mwan .tabs a{min-width:80px;font-size:16px;}
 
 .page_status_iptables .cbi-tabmenu,.page_status_mwan .cbi-tabmenu{position:absolute;top:192px;right:0}
 .page_status_iptables .cbi-tabmenu a,.page_status_mwan .cbi-tabmenu a{padding:0 10px;border-radius:0;font-size: 20px;border:1px solid #ccc;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa;text-align:center;min-width: 140px;}
