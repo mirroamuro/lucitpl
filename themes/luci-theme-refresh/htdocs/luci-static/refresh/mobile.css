@@ -3,77 +3,88 @@ header h3 a, header .brand {
 }
 
 @media screen and (max-device-width: 600px) {
-	body{
-    	background-position: 0 -35px !important;
-	}
-	header{height:71px;}
-	header .container{
-		padding:0;
-		height: 60px;
-	}
-	header div > ul, .nav{
-		font-size: 13px;
-		position: inherit;
-		width: 100%;
-		top: 16px;
-		float: none;
-		white-space: nowrap;
-	}
-	header div > ul > li, .nav > li{/* width:20% */padding-right: 10px;padding-left: 10px;display: inline-block;float: none;}
-	header div > ul a, .nav a{
-		width: 100%;
-		min-width: 0;
-		margin: 0;
-		padding: 5px 10px 5px 0;
-	}
-	header .nav .menu{
-		margin: 0;
-	}
-	.menu-dropdown, .dropdown-menu{
-		width:50px;
-		min-width: 0;
-		position: absolute;
-		width: 120%;
-		left: -10%;
-		top: 100%;
-	}
-	header ul .menu-dropdown li a, header ul .dropdown-menu li a{
-		padding:0
-	}
-	header ul .dropdown-menu li a{
-		padding:6px 0;
-		white-space: normal;
-	}
-	header div > ul > li:before, .nav > li:before{display:none;}
-	a.menu:after, .dropdown-toggle:after{
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 0;
-		top: 50%;
-		margin-top: -3px;
-	}
-	.tabs > li > a, .cbi-tabmenu > li > a{
-		min-width: 0;
-		font-size: 13px;
-	}
-	form .cbi-value label.cbi-value-title{width:100px;}
-	form .input, form .cbi-value-field{margin-left:120px;}
-	.page-title .title{font-size:18px;font-weight:bold;margin-top:60px;}
-	.page-title .desc{font-size:14px;}
-	.table .th{font-size:13px;}
-	.table .td{font-size:12px;/*word-break: break-all;*/}
-	.page_status_iptables .cbi-tabmenu a, .page_status_mwan .cbi-tabmenu a{
-		min-width: 0;
-		font-size: 13px;
-	}
-	.page-path{font-size:15px;}
-	.page_network_firewall .tabs > li > a{padding:0 3px;font-size:12px;}
-	.page_network_mwan .tabs a{width:auto;padding:0 6px;font-size: 2px;min-width:0;}
+	body {background-position:0 -35px !important;}
+	header {height:71px;}
+	header .container {padding:0;height:60px;}
+	header div > ul,.nav {font-size:13px;position:inherit;width:100%;top:16px;float:none;white-space:nowrap;}
+	header div > ul > li,.nav > li {/* width:20% */padding-right:10px;padding-left:10px;display:inline-block;float:none;}
+	header div > ul a,.nav a {width:100%;min-width:0;margin:0;padding:5px 10px 5px 0;}
+	header .nav .menu {margin:0;}
+	.menu-dropdown,.dropdown-menu {width:50px;min-width:0;position:absolute;width:120%;left:-10%;top:100%;}
+	header ul .menu-dropdown li a,header ul .dropdown-menu li a {padding:0}
+	header ul .dropdown-menu li a {padding:6px 0;white-space:normal;}
+	header div > ul > li:before,.nav > li:before {display:none;}
+	a.menu:after,.dropdown-toggle:after {position:absolute;top:0;right:0;margin:0;top:50%;margin-top:-3px;}
+	.tabs, .cbi-tabmenu{display: flex;min-width: 60%;left:0;top:240px !important;}
+	.tabs > li, .cbi-tabmenu > li{flex:1;}
+	.tabs > li > a,.cbi-tabmenu > li > a {min-width:0;font-size:13px;overflow: hidden;text-overflow:ellipsis;}
+	.tabs a {width:auto;padding:0 6px;font-size:2px;min-width:0;}
+	form .cbi-value label.cbi-value-title {width: 100%;float: none;font-size: 14px;font-weight: bold;display: block;text-align: left;margin-bottom: 10px;}
+	form .input, form .cbi-value-field{margin-left: 0;}
+	.page-title .title {font-size:18px;font-weight:bold;margin-top:60px;}
+	.page-title .desc {font-size:14px;}
+	.table .th {font-size:13px;}
+	.table .td {font-size:12px;/*word-break:break-all;*/}
+	.page_status_iptables .cbi-tabmenu a,.page_status_mwan .cbi-tabmenu a {min-width:0;font-size:13px;}
+	.page-path {font-size:15px;padding:0 15px;margin-bottom:30px;}
+	.page_network_firewall .tabs > li > a {padding:0 3px;font-size:12px;}
 
-	.page_network_mwan .tabs{left:0;top:250px;}
-	.page_network_mwan .page-path{margin-bottom:80px;}
+	.table, .table .tr, .table .td {display:block;background:#fff;}
+	.table .tr{border: 1px solid #eee;margin-bottom:5px;}
+	.table .th, .table .cbi-section-table-titles {display:none;}
+	.cbi-section-table-titles.named::before, .cbi-section-table-descr.named::before, .cbi-section-table-row[data-title]::before {border-top:none;display:block;background: #eff4f5;}
+	#cbi-mwan3-wan {border:none;}
+	#cbi-mwan3-wan, .cbi-section-table-row {border:1px solid #eee;margin:15px;padding: 0;}
+	.table .cbi-value-field{margin-left:0;}
+	.td[data-title]{position:relative;padding-left:120px;min-height:20px;}
+	.td[data-title]::before{position:absolute;content: attr(data-title) " ";padding: 10px 10px 9px;line-height: 18px;font-weight: bold;left:0;top:0;bottom: 0;display: flex;align-items: center;width: 110px;overflow: hidden;}
+	.tr.placeholder > .td{padding:0}
+	.tr.placeholder > .td::before{display:none;}
+	.cbi-section-create{margin-left:15px;}
+	.cbi-page-actions{padding: 15px;}
+	.cbi-page-actions .btn, .cbi-page-actions .cbi-button{padding:.4em .6em;font-size:14px;}
+	.cbi-section-node{padding:0 15px;}
+	.cbi-map-descr, .cbi-section-descr,h3, legend,.page_status_overview .cbi-section,.page_status_mobile .cbi-section,.cbi-map{margin-left:15px;margin-right:15px;}
+	.page_status_overview .cbi-section h3,.page_status_overview .cbi-section legend,.cbi-map legend{margin-left:0;}
+	.cbi-map .cbi-section-node{padding:0;}
+	.cbi-map .cbi-map-descr,.cbi-map .cbi-section-descr,.cbi-map h3,.cbi-map .cbi-section-create, .cbi-map #cbi-mwan3-wan, .cbi-map .cbi-section-table-row{margin-left:0;margin-right:0;}
+
+
+	.page_status_overview .cbi-section:nth-child(7) .tr:after,.page_status_overview .cbi-section:nth-child(8) .tr:after{display:table;content:"";line-height:0;clear:both}
+
+	.page_status_overview .cbi-section:nth-child(7) .td,.page_status_overview .cbi-section:nth-child(8) .td{float:left;width:50%;}
+	.page_status_overview .td[width="33%"]{width:33% !important;}
+
+	.page_status_realtime .table:nth-child(5) .tr,.page_status_realtime .table[cellspacing] .tr{display:flex;flex-flow: wrap;}
+	.page_status_realtime .table:nth-child(5) .td,.page_status_realtime .table[cellspacing] .td{box-sizing: border-box;padding:5px;}
+    
+    #mwan_status_text{text-align:center;}
+    #mwan_status_text > div{float:none;margin:2% !important;width:35% !important;}
+
+	.page_status_mwan fieldset > div{width:100% !important;margin-bottom:20px;}
+	.page_status_mwan fieldset > div > select{width:150px !important;}
+	.page_status_mwan fieldset > div > .cbi-button{margin-left:30px;}
+
+	.page_network_network .ifacebox{width:100%;border:1px solid #eee;}
+	input, textarea,select, .cbi-dropdown, .uneditable-input{width:auto;}
+	select{min-width:182px;}
+    form .cbi-section-node .cbi-value{padding: 0 15px 15px;}
+	.cbi-value-description{color:#999;font-size: 14px;line-height: 1.6;padding: 0;text-indent: 1.2em;background-position: 0 .2em;}
+	.cbi-value-field input[type=checkbox], .cbi-value-field input[type=radio]{margin-top:2px;}
+	.page_network_mwan .tabs a{min-width:0;}
+	.page_system_flashops .cbi-section-node{border:none;}
+	.page_network_qos #cbi-qos-wan{padding:0;}
+	footer{margin-top:60px;}
+	.page_network_mwan .page-path,
+	.page_status_realtime .page-path,
+	.page_status_mwan .page-path,
+	.page_network_network .page-path,
+	.page_network_wireless .page-path,
+	.page_network_firewall .page-path,
+	.page_system_flashops .page-path
+	{margin-bottom:80px;}
 }
+
 
 @media screen and (max-device-width: 360px) {
 	#maincontent.container {
