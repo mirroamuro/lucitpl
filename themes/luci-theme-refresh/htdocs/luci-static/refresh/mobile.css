@@ -31,7 +31,7 @@ header h3 a, header .brand {
 
 	.table, .table .tr, .table .td {display:block;background:#fff;}
 	.table .tr{border: 1px solid #eee;margin-bottom:5px;}
-	.table .th, .table .cbi-section-table-titles {display:none;}
+	.table .th, .table .cbi-section-table-titles,.table .table-titles {display:none;}
 	.cbi-section-table-titles.named::before, .cbi-section-table-descr.named::before, .cbi-section-table-row[data-title]::before {border-top:none;display:block;background: #eff4f5;}
 	#cbi-mwan3-wan {border:none;}
 	#cbi-mwan3-wan, .cbi-section-table-row {border:1px solid #eee;margin:15px;padding: 0;}
