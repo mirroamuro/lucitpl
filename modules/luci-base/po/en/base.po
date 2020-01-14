@@ -20,28 +20,28 @@ msgid "%s is untagged in multiple VLANs!"
 msgstr ""
 
 msgid "(%d minute window, %d second interval)"
-msgstr "(%d minute window, %d second interval)"
+msgstr "(%d min,%d sec)"
 
 msgid "(%s available)"
 msgstr "(%s available)"
 
 msgid "(empty)"
-msgstr "(empty)"
+msgstr "(none)"
 
 msgid "(no interfaces attached)"
-msgstr "(no interfaces attached)"
+msgstr "(none)"
 
 msgid "-- Additional Field --"
-msgstr "-- Additional Field --"
+msgstr "-- More --"
 
 msgid "-- Please choose --"
-msgstr "-- Please choose --"
+msgstr "-- Select --"
 
 msgid "-- custom --"
 msgstr "-- custom --"
 
 msgid "-- match by device --"
-msgstr ""
+msgstr "-- Select --"
 
 msgid "-- match by label --"
 msgstr ""
@@ -53,10 +53,10 @@ msgid "-- please select --"
 msgstr ""
 
 msgid "1 Minute Load:"
-msgstr "1 Minute Load:"
+msgstr "1 Min:"
 
 msgid "15 Minute Load:"
-msgstr "15 Minute Load:"
+msgstr "15 Min:"
 
 msgid "4-character hexadecimal ID"
 msgstr ""
@@ -65,7 +65,7 @@ msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
-msgstr "5 Minute Load:"
+msgstr "5 Min:"
 
 msgid "6-octet identifier as a hex string - no colons"
 msgstr ""
@@ -92,17 +92,17 @@ msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 
 msgid "<abbr title=\"Domain Name System\">DNS</abbr> query port"
-msgstr "<abbr title=\"Domain Name System\">DNS</abbr> query port"
+msgstr "<abbr title=\"Domain Name System\">DNS</abbr> port"
 
 msgid "<abbr title=\"Domain Name System\">DNS</abbr> server port"
-msgstr "<abbr title=\"Domain Name System\">DNS</abbr> server port"
+msgstr "<abbr title=\"Domain Name System\">DNS</abbr> port"
 
 msgid ""
 "<abbr title=\"Domain Name System\">DNS</abbr> servers will be queried in the "
 "order of the resolvfile"
 msgstr ""
-"<abbr title=\"Domain Name System\">DNS</abbr> servers will be queried in the "
-"order of the resolvfile"
+"<abbr title=\"Domain Name System\">DNS</abbr> servers  querie "
+"order by resolvfile"
 
 msgid "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
@@ -120,7 +120,7 @@ msgid ""
 "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address or Network "
 "(CIDR)"
 msgstr ""
-"<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address or Network "
+"<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address "
 "(CIDR)"
 
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
@@ -130,7 +130,7 @@ msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
 msgstr ""
 
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
-msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
+msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> Config"
 
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Name"
 msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> Name"
@@ -145,7 +145,7 @@ msgid ""
 "<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Dynamic Host Configuration "
 "Protocol\">DHCP</abbr> leases"
 msgstr ""
-"<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Dynamic Host Configuration "
+"<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Host Config "
 "Protocol\">DHCP</abbr> leases"
 
 msgid ""
@@ -153,10 +153,10 @@ msgid ""
 "Domain Name System\">EDNS0</abbr> packet size"
 msgstr ""
 "<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Extension Mechanisms for "
-"Domain Name System\">EDNS0</abbr> packet size"
+"Domain Name System\">EDNS0</abbr> size"
 
 msgid "<abbr title=\"maximal\">Max.</abbr> concurrent queries"
-msgstr "<abbr title=\"maximal\">Max.</abbr> concurrent queries"
+msgstr "<abbr title=\"maximal\">Max.</abbr> request"
 
 msgid ""
 "<br/>Note: you need to manually restart the cron service if the crontab file "
@@ -198,21 +198,21 @@ msgid ""
 "Linux network interfaces which can be used in conjunction with DHCP or PPP "
 "to dial into the provider network."
 msgstr ""
-"ATM bridges expose encapsulated ethernet in AAL5 connections as virtual "
-"Linux network interfaces which can be used in conjunction with DHCP or PPP "
-"to dial into the provider network."
+"ATM bridges expose encapsulated ethernet in AAL5 "
+"Network interfaces can be used in DHCP or PPP "
+"to the provider network."
 
 msgid "ATM device number"
-msgstr "ATM device number"
+msgstr "ATM number"
 
 msgid "ATU-C System Vendor ID"
 msgstr ""
 
 msgid "Access Concentrator"
-msgstr "Access Concentrator"
+msgstr "Access"
 
 msgid "Access Point"
-msgstr "Access Point"
+msgstr "Access"
 
 msgid "Actions"
 msgstr "Actions"
@@ -224,7 +224,7 @@ msgid "Active <abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Routes"
 msgstr "Active <abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Routes"
 
 msgid "Active Connections"
-msgstr "Active Connections"
+msgstr "Connected"
 
 msgid "Active DHCP Leases"
 msgstr ""
@@ -239,13 +239,13 @@ msgid "Add"
 msgstr "Add"
 
 msgid "Add local domain suffix to names served from hosts files"
-msgstr "Add local domain suffix to names served from hosts files"
+msgstr "Add domain suffix"
 
 msgid "Add new interface..."
-msgstr "Add new interface..."
+msgstr "Add interface..."
 
 msgid "Additional Hosts files"
-msgstr "Additional Hosts files"
+msgstr "Add Host"
 
 msgid "Additional servers file"
 msgstr ""
@@ -254,13 +254,13 @@ msgid "Address"
 msgstr "Address"
 
 msgid "Address to access local relay bridge"
-msgstr "Address to access local relay bridge"
+msgstr "Bridge Address"
 
 msgid "Administration"
-msgstr "Administration"
+msgstr "System"
 
 msgid "Advanced Settings"
-msgstr "Advanced Settings"
+msgstr "Advance"
 
 msgid "Aggregate Transmit Power(ACTATP)"
 msgstr ""
@@ -286,7 +286,7 @@ msgid "Allocate IP sequentially"
 msgstr ""
 
 msgid "Allow <abbr title=\"Secure Shell\">SSH</abbr> password authentication"
-msgstr "Allow <abbr title=\"Secure Shell\">SSH</abbr> password authentication"
+msgstr "Allow <abbr title=\"Secure Shell\">SSH</abbr> by password"
 
 msgid "Allow AP mode to disconnect STAs based on low ACK condition"
 msgstr ""
@@ -304,18 +304,18 @@ msgid "Allow localhost"
 msgstr "Allow localhost"
 
 msgid "Allow remote hosts to connect to local SSH forwarded ports"
-msgstr "Allow remote hosts to connect to local SSH forwarded ports"
+msgstr "Allow SSH ports"
 
 msgid "Allow root logins with password"
-msgstr "Allow root logins with password"
+msgstr "Allow root login"
 
 msgid "Allow the <em>root</em> user to login with password"
-msgstr "Allow the <em>root</em> user to login with password"
+msgstr "Allow the <em>root</em> login with password"
 
 msgid ""
 "Allow upstream responses in the 127.0.0.0/8 range, e.g. for RBL services"
 msgstr ""
-"Allow upstream responses in the 127.0.0.0/8 range, e.g. for RBL services"
+"Allow UP responses in 127.0.0.0/8, e.g. RBL"
 
 msgid "Allowed IPs"
 msgstr ""
@@ -493,28 +493,28 @@ msgid "Back"
 msgstr "Back"
 
 msgid "Back to Overview"
-msgstr "Back to Overview"
+msgstr "Overview"
 
 msgid "Back to configuration"
-msgstr "Back to configuration"
+msgstr "To config"
 
 msgid "Back to overview"
-msgstr "Back to overview"
+msgstr "To overview"
 
 msgid "Back to scan results"
-msgstr "Back to scan results"
+msgstr "To scan"
 
 msgid "Backup"
-msgstr ""
+msgstr "Backup"
 
 msgid "Backup / Flash Firmware"
-msgstr "Backup / Flash Firmware"
+msgstr "Backup/Upgrade"
 
 msgid "Backup file list"
-msgstr "Backup file list"
+msgstr "Backup files"
 
 msgid "Bad address specified!"
-msgstr "Bad address specified!"
+msgstr "address error!"
 
 msgid "Band"
 msgstr ""
@@ -535,7 +535,7 @@ msgid "Bind interface"
 msgstr ""
 
 msgid "Bind only to specific interfaces rather than wildcard address."
-msgstr ""
+msgstr "Specific interfaces"
 
 msgid "Bind the tunnel to this interface (optional)."
 msgstr ""
@@ -553,10 +553,10 @@ msgid "Bridge interfaces"
 msgstr "Bridge interfaces"
 
 msgid "Bridge unit number"
-msgstr "Bridge unit number"
+msgstr "Bridge number"
 
 msgid "Bring up on boot"
-msgstr "Bring up on boot"
+msgstr "Auto"
 
 msgid "Broadcom 802.11%s Wireless Controller"
 msgstr ""
@@ -576,7 +576,7 @@ msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
 msgid "CPU usage (%)"
-msgstr "CPU usage (%)"
+msgstr "CPU(%)"
 
 msgid "Call failed"
 msgstr ""
@@ -594,13 +594,13 @@ msgid "Changes"
 msgstr "Changes"
 
 msgid "Changes applied."
-msgstr "Changes applied."
+msgstr "Success."
 
 msgid "Changes have been reverted."
 msgstr ""
 
 msgid "Changes the administrator password for accessing the device"
-msgstr "Changes the administrator password for accessing the device"
+msgstr "Changes password"
 
 msgid "Channel"
 msgstr "Channel"
@@ -648,33 +648,33 @@ msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
 "configuration files."
 msgstr ""
-"Click \"Generate archive\" to download a tar archive of the current "
+"Click \"Generate archive\" to download  "
 "configuration files."
 
 msgid "Client"
 msgstr "Client"
 
 msgid "Client ID to send when requesting DHCP"
-msgstr "Client ID to send when requesting DHCP"
+msgstr "Send Client ID "
 
 msgid ""
 "Close inactive connection after the given amount of seconds, use 0 to "
 "persist connection"
 msgstr ""
-"Close inactive connection after the given amount of seconds, use 0 to "
+"Close inactive connection, use 0S to "
 "persist connection"
 
 msgid "Close list..."
-msgstr "Close list..."
+msgstr "Close..."
 
 msgid "Collecting data..."
-msgstr "Collecting data..."
+msgstr "Collecting..."
 
 msgid "Command"
 msgstr "Command"
 
 msgid "Common Configuration"
-msgstr "Common Configuration"
+msgstr "Common Config"
 
 msgid ""
 "Complicates key reinstallation attacks on the client side by disabling "
@@ -684,13 +684,13 @@ msgid ""
 msgstr ""
 
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "Config"
 
 msgid "Configuration failed"
 msgstr ""
 
 msgid "Configuration files will be kept."
-msgstr "Configuration files will be kept."
+msgstr "Config files kept."
 
 msgid "Configuration has been applied."
 msgstr ""
@@ -708,13 +708,13 @@ msgid "Connected"
 msgstr "Connected"
 
 msgid "Connection Limit"
-msgstr "Connection Limit"
+msgstr "ConnectLimit"
 
 msgid "Connection attempt failed"
 msgstr ""
 
 msgid "Connections"
-msgstr "Connections"
+msgstr "Connect"
 
 msgid ""
 "Could not regain access to the device after applying the configuration "
@@ -738,16 +738,16 @@ msgid "Create / Assign firewall-zone"
 msgstr "Create / Assign firewall-zone"
 
 msgid "Create Interface"
-msgstr "Create Interface"
+msgstr "Create"
 
 msgid "Create a bridge over multiple interfaces"
-msgstr "Create a bridge over multiple interfaces"
+msgstr "Create a bridge"
 
 msgid "Critical"
 msgstr "Critical"
 
 msgid "Cron Log Level"
-msgstr "Cron Log Level"
+msgstr "Log Level"
 
 msgid "Custom Interface"
 msgstr "Custom Interface"
@@ -866,13 +866,13 @@ msgid "Delete"
 msgstr "Delete"
 
 msgid "Delete this network"
-msgstr "Delete this network"
+msgstr "Delete network"
 
 msgid "Delivery Traffic Indication Message Interval"
 msgstr ""
 
 msgid "Description"
-msgstr "Description"
+msgstr "Descr."
 
 msgid "Design"
 msgstr "Design"
@@ -884,7 +884,7 @@ msgid "Device"
 msgstr "Device"
 
 msgid "Device Configuration"
-msgstr "Device Configuration"
+msgstr "Device Config"
 
 msgid "Device is rebooting..."
 msgstr ""
@@ -1265,7 +1265,7 @@ msgid "Fixed source port for outbound DNS queries"
 msgstr ""
 
 msgid "Flash Firmware"
-msgstr "Flash Firmware"
+msgstr "Flash"
 
 msgid "Flash image..."
 msgstr ""
@@ -1414,8 +1414,8 @@ msgid ""
 "Here you can configure the basic aspects of your device like its hostname or "
 "the timezone."
 msgstr ""
-"Here you can configure the basic aspects of your device like its hostname or "
-"the timezone."
+"Configure the basic aspects of your device eg. hostname or "
+"timezone."
 
 msgid ""
 "Here you can paste public SSH-Keys (one per line) for SSH public-key "
@@ -1606,7 +1606,7 @@ msgid ""
 "slow process as the swap-device cannot be accessed with the high datarates "
 "of the <abbr title=\"Random Access Memory\">RAM</abbr>."
 msgstr ""
-"If your physical memory is insufficient unused data can be temporarily "
+"If memory is insufficient unused data can be temporarily "
 "swapped to a swap-device resulting in a higher amount of usable <abbr title="
 "\"Random Access Memory\">RAM</abbr>. Be aware that swapping data is a very "
 "slow process as the swap-device cannot be accessed with the high datarates "
@@ -2072,7 +2072,7 @@ msgid ""
 "Mount Points define at which point a memory device will be attached to the "
 "filesystem"
 msgstr ""
-"Mount Points define at which point a memory device will be attached to the "
+"Mount Points define will be attached to the "
 "filesystem"
 
 msgid "Mount filesystems not specifically configured"
@@ -2088,7 +2088,7 @@ msgid "Mount swap not specifically configured"
 msgstr ""
 
 msgid "Mounted file systems"
-msgstr "Mounted file systems"
+msgstr "Mounted files"
 
 msgid "Move down"
 msgstr ""
@@ -2160,7 +2160,7 @@ msgid "No NAT-T"
 msgstr ""
 
 msgid "No chains in this table"
-msgstr "No chains in this table"
+msgstr "No chains"
 
 msgid "No files found"
 msgstr ""
@@ -2187,7 +2187,7 @@ msgid "No password set!"
 msgstr ""
 
 msgid "No rules in this chain"
-msgstr "No rules in this chain"
+msgstr "No rules"
 
 msgid "No scan results available yet..."
 msgstr ""
@@ -2244,7 +2244,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OPKG-Configuration"
-msgstr "OPKG-Configuration"
+msgstr "OPKG-Config"
 
 msgid "Obfuscated Group Password"
 msgstr ""
@@ -2266,9 +2266,9 @@ msgid ""
 "<samp>INTERFACE.VLANNR</samp> (<abbr title=\"for example\">e.g.</abbr>: "
 "<samp>eth0.1</samp>)."
 msgstr ""
-"On this page you can configure the network interfaces. You can bridge "
+"You can configure the network interfaces and bridge "
 "several interfaces by ticking the \"bridge interfaces\" field and enter the "
-"names of several network interfaces separated by spaces. You can also use "
+"names of several network interfaces separated by spaces. You can use "
 "<abbr title=\"Virtual Local Area Network\">VLAN</abbr> notation "
 "<samp>INTERFACE.VLANNR</samp> (<abbr title=\"for example\">e.g.</abbr>: "
 "<samp>eth0.1</samp>)."
@@ -2459,10 +2459,10 @@ msgid "Password"
 msgstr "Password"
 
 msgid "Password authentication"
-msgstr "Password authentication"
+msgstr "Check Pwd"
 
 msgid "Password of Private Key"
-msgstr "Password of Private Key"
+msgstr "Private Key"
 
 msgid "Password of inner Private Key"
 msgstr ""
@@ -2474,7 +2474,7 @@ msgid "Password2"
 msgstr ""
 
 msgid "Path to CA-Certificate"
-msgstr "Path to CA-Certificate"
+msgstr "Path to CA-Cert."
 
 msgid "Path to Client-Certificate"
 msgstr ""
@@ -2519,7 +2519,7 @@ msgid "Phy Rate:"
 msgstr ""
 
 msgid "Physical Settings"
-msgstr "Physical Settings"
+msgstr "Physical"
 
 msgid "Ping"
 msgstr ""
@@ -2528,7 +2528,7 @@ msgid "Pkts."
 msgstr "Pkts."
 
 msgid "Please enter your username and password."
-msgstr "Please enter your username and password."
+msgstr "Please enter username and password."
 
 msgid "Policy"
 msgstr "Policy"
@@ -2631,7 +2631,7 @@ msgid "RFC3947 NAT-T mode"
 msgstr ""
 
 msgid "RTS/CTS Threshold"
-msgstr "RTS/CTS Threshold"
+msgstr "RTS/CTS"
 
 msgid "RX"
 msgstr "RX"
@@ -2711,7 +2711,7 @@ msgid "Rebooting..."
 msgstr ""
 
 msgid "Reboots the operating system of your device"
-msgstr "Reboots the operating system of your device"
+msgstr "Reboots your device"
 
 msgid "Receive"
 msgstr "Receive"
@@ -2753,7 +2753,7 @@ msgid "Repeat scan"
 msgstr "Repeat scan"
 
 msgid "Replace entry"
-msgstr "Replace entry"
+msgstr "Reset"
 
 msgid "Replace wireless configuration"
 msgstr ""
@@ -2865,7 +2865,7 @@ msgid ""
 "Routes specify over which interface and gateway a certain host or network "
 "can be reached."
 msgstr ""
-"Routes specify over which interface and gateway a certain host or network "
+"Routes  host or network "
 "can be reached."
 
 msgid "Run a filesystem check before mounting the device"
@@ -2902,7 +2902,7 @@ msgid "Save"
 msgstr "Save"
 
 msgid "Save & Apply"
-msgstr "Save & Apply"
+msgstr "Apply"
 
 msgid "Scan"
 msgstr "Scan"
@@ -2911,7 +2911,7 @@ msgid "Scan request failed"
 msgstr ""
 
 msgid "Scheduled Tasks"
-msgstr "Scheduled Tasks"
+msgstr "Tasks"
 
 msgid "Section added"
 msgstr ""
@@ -2928,7 +2928,7 @@ msgid ""
 msgstr ""
 
 msgid "Separate Clients"
-msgstr "Separate Clients"
+msgstr "Separate"
 
 msgid "Server Settings"
 msgstr ""
@@ -2996,13 +2996,13 @@ msgid "Skip"
 msgstr "Skip"
 
 msgid "Skip to content"
-msgstr "Skip to content"
+msgstr "Skip"
 
 msgid "Skip to navigation"
-msgstr "Skip to navigation"
+msgstr "Skip"
 
 msgid "Slot time"
-msgstr "Slot time"
+msgstr "SlotTime"
 
 msgid "Software"
 msgstr "Software"
@@ -3064,7 +3064,7 @@ msgid "Start"
 msgstr "Start"
 
 msgid "Start priority"
-msgstr "Start priority"
+msgstr "Priority"
 
 msgid "Starting configuration apply…"
 msgstr ""
@@ -3076,16 +3076,16 @@ msgid "Startup"
 msgstr ""
 
 msgid "Static IPv4 Routes"
-msgstr "Static IPv4 Routes"
+msgstr "IPv4"
 
 msgid "Static IPv6 Routes"
-msgstr "Static IPv6 Routes"
+msgstr "IPv6"
 
 msgid "Static Leases"
-msgstr "Static Leases"
+msgstr "Leases"
 
 msgid "Static Routes"
-msgstr "Static Routes"
+msgstr "Routes"
 
 msgid "Static address"
 msgstr ""
@@ -3103,7 +3103,7 @@ msgid "Stop"
 msgstr "Stop"
 
 msgid "Strict order"
-msgstr "Strict order"
+msgstr "Order"
 
 msgid "Submit"
 msgstr "Submit"
@@ -3152,7 +3152,7 @@ msgid "System"
 msgstr "System"
 
 msgid "System Log"
-msgstr "System Log"
+msgstr "Log"
 
 msgid "System Properties"
 msgstr ""
@@ -3257,7 +3257,7 @@ msgid ""
 msgstr ""
 
 msgid "The following changes have been reverted"
-msgstr "The following changes have been reverted"
+msgstr "These changes have been reverted"
 
 msgid "The following rules are currently active on this system."
 msgstr "The following rules are currently active on this system."
@@ -3308,8 +3308,8 @@ msgid ""
 "address of your computer to reach the device again, depending on your "
 "settings."
 msgstr ""
-"The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
-"few minutes until you try to reconnect. It might be necessary to renew the "
+"System is flashing now.<br /> DO NOT POWER OFF!<br /> Wait a "
+"few minutes until reconnect. It might be necessary to renew the "
 "address of your computer to reach the device again, depending on your "
 "settings."
 
@@ -3440,16 +3440,16 @@ msgid "Transfer"
 msgstr "Transfer"
 
 msgid "Transmission Rate"
-msgstr "Transmission Rate"
+msgstr "Rate"
 
 msgid "Transmit"
 msgstr "Transmit"
 
 msgid "Transmit Power"
-msgstr "Transmit Power"
+msgstr "Power"
 
 msgid "Transmitter Antenna"
-msgstr "Transmitter Antenna"
+msgstr "Antenna"
 
 msgid "Trigger"
 msgstr ""
@@ -3690,7 +3690,7 @@ msgid "WEP passphrase"
 msgstr ""
 
 msgid "WMM Mode"
-msgstr "WMM Mode"
+msgstr "WMM"
 
 msgid "WPA passphrase"
 msgstr ""
@@ -3735,16 +3735,16 @@ msgid "Wireless"
 msgstr ""
 
 msgid "Wireless Adapter"
-msgstr "Wireless Adapter"
+msgstr "Adapter"
 
 msgid "Wireless Network"
-msgstr "Wireless Network"
+msgstr "Network"
 
 msgid "Wireless Overview"
-msgstr "Wireless Overview"
+msgstr "Overview"
 
 msgid "Wireless Security"
-msgstr "Wireless Security"
+msgstr "Security"
 
 msgid "Wireless is disabled"
 msgstr ""
