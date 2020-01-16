@@ -146,6 +146,8 @@ header div > ul .menu-dropdown li a:hover,.nav .menu-dropdown li a:hover,header 
 header div > ul .menu-dropdown .active a,.nav .menu-dropdown .active a,header div > ul .dropdown-menu .active a,.nav .dropdown-menu .active a{color:#fff}
 header div > ul .menu-dropdown .divider,.nav .menu-dropdown .divider,header div > ul .dropdown-menu .divider,.nav .dropdown-menu .divider{background-color:#222;border-color:#444}
 header .nav .menu{margin:0 10px;border-radius:8px}
+header .nav .menu .web{display:inline;}
+header .nav .menu .wap{display:none;}
 header ul .menu-dropdown li a,header ul .dropdown-menu li a{padding:16px 15px}
 li.menu,.dropdown{position:relative}
 a.menu:after,.dropdown-toggle:after{width:0;height:0;display:inline-block;content:"&darr;";text-indent:-99999px;vertical-align:top;margin-top:8px;margin-left:4px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000;opacity:0.5}

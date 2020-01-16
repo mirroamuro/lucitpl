@@ -259,6 +259,9 @@ msgstr "管理权"
 msgid "Advanced Settings"
 msgstr "高级设置"
 
+msgid "Adv Set"
+msgstr "高级设置"
+
 msgid "Aggregate Transmit Power(ACTATP)"
 msgstr "总发射功率（ACTATP）"
 
@@ -1350,6 +1353,9 @@ msgid "Gateway ports"
 msgstr "网关端口"
 
 msgid "General Settings"
+msgstr "基本设置"
+
+msgid "General Set"
 msgstr "基本设置"
 
 msgid "General Setup"
@@ -3987,6 +3993,9 @@ msgid "Mobile network"
 msgstr "移动网络"
 
 msgid "System tools"
+msgstr "系统工具"
+
+msgid "Sys tools"
 msgstr "系统工具"
 
 msgid "Diagnosis"
