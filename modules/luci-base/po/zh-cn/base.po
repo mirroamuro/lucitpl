@@ -4001,6 +4001,15 @@ msgstr "系统工具"
 msgid "Diagnosis"
 msgstr "诊断"
 
+msgid "SLOT"
+msgstr "插槽"
+
+msgid "Operator"
+msgstr "运营商"
+
+msgid "Manufacturer"
+msgstr "厂商"
+
 #~ msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 #~ msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 

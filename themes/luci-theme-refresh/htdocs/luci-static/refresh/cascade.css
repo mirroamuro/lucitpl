@@ -80,7 +80,7 @@ textarea{padding-top:5px}
 select{padding:initial;background:#fff;box-shadow:inset 0 -1px 3px rgba(0,0,0,0.1)}
 input[type=checkbox],input[type=radio]{width:auto;height:auto;padding:0;margin:3px 0;*margin-top:0;line-height:normal;border:none}
 input[type=file]{background-color:#fff;padding:initial;border:initial;line-height:initial;box-shadow:none;width:auto !important}
-input[type=button],input[type=reset],input[type=submit]{width:auto;height:auto}
+input[type=button],input[type=reset],input[type=submit]{width:auto;height:auto;min-height:32px;}
 select,input[type=file]{*height:auto;*margin-top:4px}
 select[multiple]{height:inherit;background-color:#fff}
 textarea{height:auto}
@@ -113,7 +113,7 @@ select[readonly],textarea[readonly]{pointer-events:auto;cursor:auto}
 .table[width="100%"],.th[width="100%"],.td[width="100%"]{width:100%}
 .table{display:table;width:100%;margin-bottom:18px;padding:0;font-size:15px;border-collapse:collapse;position:relative;background: #eee;border-collapse: separate;border-spacing: 1px;}
 .table .th,.table .td{display:table-cell;vertical-align:middle;padding:10px 10px 9px;line-height: 20px;text-align:left;}
-.table .tr:first-child .th{padding-top:9px;font-weight:bold;vertical-align:top}
+.table .tr:first-child .th{padding-top:9px;font-weight:bold;vertical-align:top;}
 .table .tr .th{padding-top:9px;font-weight:bold}
 .table .td{background:#fff;}
 .table .th{background:#eff4f5;color:#000;}
@@ -210,12 +210,12 @@ footer{margin-top: 50px;padding-top:20px;background:url('icons/footer.png') cent
 .cbi-dropdown > ul{margin:0 !important;padding:0;list-style:none;overflow-x:hidden;overflow-y:auto;display:flex;width:100%}
 .cbi-dropdown > ul.preview{display:none}
 .cbi-dropdown > .open,.cbi-dropdown > .more{flex-grow:0;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;text-align:center;line-height:2em;padding:0 .25em;background:#4596aa;color:#fff}
-.cbi-dropdown > .more,.cbi-dropdown > ul > li[placeholder]{color:#777;font-weight:bold;text-shadow:1px 1px 0px #fff;display:none}
+.cbi-dropdown > .more,.cbi-dropdown > ul > li[placeholder]{color: #fff;/* font-weight:bold; *//* text-shadow:1px 1px 0px #fff; */display:none;}
 .cbi-dropdown > ul > li{display:none;padding:.35em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:1;flex-grow:1;align-items:center;align-self:center;color:#404040;min-height:20px}
 .cbi-dropdown > ul > li .hide-open{display:block;display:initial}
 .cbi-dropdown > ul > li .hide-close{display:none}
 .cbi-dropdown > ul > li[display]:not([display="0"]){border-left:1px solid #ccc}
-.cbi-dropdown[empty] > ul{max-width:1px}
+.cbi-dropdown[empty] > ul{max-width: 0;}
 .cbi-dropdown > ul > li > form{display:none;margin:0;padding:0;pointer-events:none}
 .cbi-dropdown > ul > li img{vertical-align:middle;margin-right:.25em}
 .cbi-dropdown > ul > li > form > input[type="checkbox"]{margin:0}
@@ -276,7 +276,8 @@ header .pull-right{padding-top:23px;display:none;}
 .cbi-section-table .tr:hover .td,.cbi-section-table .tr:hover .th,.cbi-section-table .tr:hover::before{/*background-color:#f5f5f5*/}
 .cbi-section-table .tr.cbi-section-table-descr .th{font-weight:normal}
 .cbi-section-table-titles.named::before,.cbi-section-table-descr.named::before,.cbi-section-table-row[data-title]::before{content:attr(data-title) " ";display:table-cell;padding:10px 10px 9px;line-height:18px;font-weight:bold;vertical-align:middle}
-.cbi-section-table-titles.named::before,.cbi-section-table-descr.named::before,.cbi-section-table-row[data-title]::before{border-top:1px solid #ddd}
+.cbi-section-table-titles.named::before,.cbi-section-table-descr.named::before,.cbi-section-table-row[data-title]::before{/* border-top:1px solid #ddd; */background: #fff;}
+.cbi-section-table-titles.named::before{background: #eff4f5;}
 .left{text-align:left !important}
 .right{text-align:right !important}
 .center{text-align:center !important}
@@ -477,4 +478,7 @@ embed{border:1px solid #ddd !important;}
 .page_network_mwan .tabs a{min-width:80px;font-size:16px;}
 
 .page_status_iptables .cbi-tabmenu,.page_status_mwan .cbi-tabmenu{position:absolute;top:192px;right:0}
-.page_status_iptables .cbi-tabmenu a,.page_status_mwan .cbi-tabmenu a{padding:0 10px;border-radius:0;font-size: 20px;border:1px solid #ccc;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa;text-align:center;min-width: 140px;}
+.page_status_iptables .cbi-tabmenu a,.page_status_mwan .cbi-tabmenu a{padding:0 10px;border-radius:0;font-size: 20px;height:49px;line-height:50px;text-decoration:underline;border-right:none;color:#4589aa;text-align:center;min-width: 140px;}
+.page_status_realtime .cbi-tabmenu > li > a{min-width: 120px;}
+.page_status_realtime .table .td{vertical-align: middle !important;}
+.page_status_mwan select{width:210px !important;}

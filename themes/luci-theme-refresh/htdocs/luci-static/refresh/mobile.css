@@ -23,8 +23,8 @@ header h3 a, header .brand {
 	.tabs a {width:auto;padding:0 6px;font-size:2px;min-width:0;}
 	form .cbi-value label.cbi-value-title {width: 100%;float: none;font-size: 14px;font-weight: bold;display: block;text-align: left;margin-bottom: 10px;}
 	form .input, form .cbi-value-field{margin-left: 0;}
-	.page-title .title {font-size:18px;font-weight:bold;margin-top:60px;}
-	.page-title .desc {font-size:14px;}
+	.page-title .title {font-size:18px;font-weight:bold;margin-top:60px;margin-left: 200px;margin-right: 10px;}
+	.page-title .desc {font-size:14px;margin-left: 200px;margin-right: 10px;margin-top: 10px;}
 	.table .th {font-size:13px;}
 	.table .td {font-size:12px;/*word-break:break-all;*/}
 	.page_status_iptables .cbi-tabmenu a,.page_status_mwan .cbi-tabmenu a {min-width:0;font-size:13px;}
@@ -38,13 +38,13 @@ header h3 a, header .brand {
 	#cbi-mwan3-wan {border:none;}
 	#cbi-mwan3-wan, .cbi-section-table-row {border:1px solid #eee;margin:15px;padding: 0;}
 	.table .cbi-value-field{margin-left:0;}
-	.td[data-title]{position:relative;padding-left:120px;min-height:20px;}
+	.td[data-title]{position:relative;padding-left:120px;min-height:20px;word-break:break-all;}
 	.td[data-title]::before{position:absolute;content: attr(data-title) " ";padding: 10px 10px 9px;line-height: 18px;font-weight: bold;left:0;top:0;bottom: 0;display: flex;align-items: center;width: 110px;overflow: hidden;}
 	.tr.placeholder > .td{padding:0}
 	.tr.placeholder > .td::before{display:none;}
 	.cbi-section-create{margin-left:15px;}
 	.cbi-page-actions{padding: 15px;}
-	.cbi-page-actions .btn, .cbi-page-actions .cbi-button{padding:.4em .6em;font-size:14px;}
+	.cbi-page-actions .btn, .cbi-page-actions .cbi-button{padding: .6em .6em;font-size: 13px;}
 	.cbi-section-node{padding:0 15px;}
 	.cbi-map-descr, .cbi-section-descr,h3, legend,.page_status_overview .cbi-section,.page_status_mobile .cbi-section,.cbi-map{margin-left:15px;margin-right:15px;}
 	.page_status_overview .cbi-section h3,.page_status_overview .cbi-section legend,.cbi-map legend{margin-left:0;}
@@ -58,7 +58,7 @@ header h3 a, header .brand {
 	.page_status_overview .td[width="33%"]{width:33% !important;}
 
 	.page_status_realtime .table:nth-child(5) .tr,.page_status_realtime .table[cellspacing] .tr{display:flex;flex-flow: wrap;}
-	.page_status_realtime .table:nth-child(5) .td,.page_status_realtime .table[cellspacing] .td{box-sizing: border-box;padding:5px;}
+	.page_status_realtime .table:nth-child(5) .td,.page_status_realtime .table[cellspacing] .td{box-sizing: border-box;padding:5px;display: flex;align-items: center;}
     
     #mwan_status_text{text-align:center;}
     #mwan_status_text > div{float:none;margin:2% !important;width:35% !important;}
@@ -90,6 +90,12 @@ header h3 a, header .brand {
 
     .page_login_main form .cbi-value label.cbi-value-title{display:none;}
     .page_login_main form{box-sizing:border-box;background-size: 100% 100%;}
+	.page_status_realtime .cbi-tabmenu > li > a{min-width: 0;}
+
+	.page_system_flashops form .cbi-section-node .cbi-value{padding:0 0 15px}
+
+	.page_system_reboot p,.page_system_reboot .alert-message, .page_system_reboot .cbi-button-action.important{margin-left:15px;margin-right:15px}
+
 }
 
 
