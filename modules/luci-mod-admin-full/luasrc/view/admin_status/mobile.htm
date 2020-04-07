@@ -1,6 +1,159 @@
 <%#
- Copyright 2011 Jo-Philipp Wich <jow@openwrt.org>
- Licensed to the public under the Apache License 2.0.
+ Copyright 2018-2019 luoyaofeng <lyf@milings.com>
+-%>
+
+<%-
+        local style = true
+        local isp  = {}
+        isp['46000'] = 'China Mobile'
+        isp['46007'] = 'China Mobile TD-SCDMA'
+        isp['46001'] = 'China Unicom'
+        isp['46006'] = 'China Unicom' 
+        isp['46005'] = 'China Telecom'
+        isp['46011'] = 'China Telecom'
+        isp['46005'] = 'China Unkonw'
+         
+         
+        ifaces  = {}
+        function copstoisp(cops)
+        local str = tostring(cops)
+        local nf = string.find(str,'46')
+        if nf ~=nil then
+         return isp[str]
+        end
+        return cops
+        end
+
+        function csqtosignle(csq)
+        if csq == '-' or csq == nil then return nil end
+        local signle = 0
+        signle = tonumber(csq)*100 / 3200   
+        signle = math.ceil(signle*100)
+        return signle
+        end
+
+        function signletores(signle)
+        if signle == nil then return "/luci-static/resources/icons/signal-none.png" end
+        local res = "/luci-static/resources/icons/signal-none.png"
+        if signle >75 then 
+        res = "/luci-static/resources/icons/signal-75-100.png"
+        elseif signle > 50 then
+        res = "/luci-static/resources/icons/signal-50-75.png"
+        elseif signle > 25 then
+        res = "/luci-static/resources/icons/signal-25-50.png"
+        elseif signle > 0 then 
+        res = "/luci-static/resources/icons/signal-0-25.png"
+        elseif signle == 0 then
+        res = "/luci-static/resources/icons/signal-0.png"
+        end
+        return res
+        end 
+ 
+        function mc4g(at,select)
+        local iccid = '-'                                         
+        local imei = '-'                                          
+        local csq = '-'                                           
+        local cops = '-'                                          
+        local product = '-'                                       
+        local ok = nil   
+        local mc4gstr = nil
+       if select == nil then
+         mc4gstr = luci.sys.exec('/sbin/mc4g '..at)
+        else
+         mc4gstr = luci.sys.exec('/sbin/mc4g '..at..' 1')
+        end
+        if mc4gstr ~= nil then
+         
+         mc4gt = string.split(mc4gstr,',')
+         if #mc4gt <5 then
+         return ok,iccid,imei,csq,cops,product
+         end
+         imei =   string.split(mc4gt[1],' ')[2]
+         iccid  = string.split(mc4gt[2],' ')[2]  
+         cops =   string.split(mc4gt[3],' ')[2]  
+         csq =    string.split(mc4gt[4],' ')[2]  
+         product = string.split(mc4gt[5],' ')[2]  
+         if string.len(imei)==15 then
+         ok = true 
+        end
+        end
+         return ok,iccid,imei,csq,cops,product       
+        end
+        
+       function query4ginfoair(index)
+        local iccid = '-'                          
+        local imei = '-'                           
+        local csq = '-'  
+        local cops = '-'                          
+        local product = '-'                           
+        local ok = nil 
+        index = index*3
+        local at = '/dev/ttyUSB'..tostring(index)
+        local ok,iccid,imei,csq,cops,product = mc4g(at,nil)  
+        return ok,iccid,imei,csq,cops,product 
+        end
+        
+        function query4ginfoquectel(index)
+        local iccid = '-'                       
+        local imei = '-'                        
+        local csq = '-'                         
+        local cops = '-'                        
+        local product = '-'                     
+        local ok = nil                          
+        index = index*3+3-1                          
+        local at = '/dev/ttyUSB'..tostring(index)
+        local ok,iccid,imei,csq,cops,product = mc4g(at,1)
+        return ok,iccid,imei,csq,cops,product       
+        end
+     
+        -- query 4g info   
+        function query4ginfo(index) 
+        local iccid = '-' 
+        local imei = '-' 
+        local csq = '-' 
+        local cops= ''
+        local product = '-' 
+        local ok = nil 
+
+        ok,iccid,imei,csq,cops,product = query4ginfoair(index)
+       
+        if ok ~=nil then
+        return ok,iccid,imei,csq,cops,product
+        end 
+        
+        ok,iccid,imei,csq,cops,product = query4ginfoquectel(index)
+        
+        if ok ~=nil then                                 
+        return ok,iccid,imei,csq,cops,product                    
+        end           
+                          
+        return ok,iccid,imei,csq,cops,product
+
+        end
+
+        -- foreache 4g inface in network
+        local x = luci.model.uci.cursor()
+        local i = 0
+        x:foreach("network","interface",function(s)
+        local e4g = {}
+        local name4g  = s[".name"]
+        local namelow = string.lower(name4g)
+        local is4g = string.find (namelow, '4g')
+        if is4g~=nil then
+        local dev4g = x:get("network",name4g,'ifname')
+        e4g['name'] = name4g
+        e4g['dev'] = dev4g
+        local ok,iccid,imei,csq,cops,product = query4ginfo(i)
+        e4g['iccid'] = iccid
+        e4g['imei'] = imei
+        e4g['csq'] = csq
+        e4g['cops'] = cops
+        e4g['product'] = product
+        e4g['signle'] = csqtosignle(csq)
+        table.insert(ifaces,e4g)
+        i = i + 1
+        end  
+        end ) 
 -%>
 
 <%+header%>
@@ -15,14 +168,19 @@
 			<div class="th"><%:Operator%></div>
 			<div class="th"><%:Manufacturer%></div>
 		</div>
+		<% for i,v in pairs(ifaces) do %>
 		<div class="tr">
-			<div class="td">4G1</div>
-			<div class="td">866866868868</div>
-			<div class="td"></div>
-			<div class="td"><img src="/luci-static/resources/icons/signal-75-100.png" style="vertical-align: middle;margin-right:5px;"><span style="display: inline-block;vertical-align: middle;">79%</span></div>
-			<div class="td">China Telecom</div>
-			<div class="td">Arewqefvssd4543</div>
+			<div class="td"><%= v.name %></div>
+			<div class="td"><%= v.imei %></div>
+			<div class="td"><%= v.iccid %></div>
+			<div class="td">
+				<img style="vertical-align: middle;margin-right:5px;" src="<%=signletores(v.signle)%>" />
+				<span style="display: inline-block;vertical-align: middle;"><%=v.signle%>%</span>
+			</div>
+			<div class="td"><%= copstoisp(v.cops) %></div>
+			<div class="td"><%= v.product%></div>
 		</div>
+		<% style = not style end %>
 	</div>
 </div>
 
