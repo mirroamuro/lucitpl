@@ -64,15 +64,15 @@
         end
         if mc4gstr ~= nil then
          
-         mc4gt = string.split(mc4gstr,',')
+         mc4gt = string.split(mc4gstr,"\n")
          if #mc4gt <5 then
          return ok,iccid,imei,csq,cops,product
          end
-         imei =   string.split(mc4gt[1],' ')[2]
-         iccid  = string.split(mc4gt[2],' ')[2]  
-         cops =   string.split(mc4gt[3],' ')[2]  
-         csq =    string.split(mc4gt[4],' ')[2]  
-         product = string.split(mc4gt[5],' ')[2]  
+         imei =   mc4gt[1] 
+         iccid  = mc4gt[2] 
+         cops =   mc4gt[3]  
+         csq =    mc4gt[4]  
+         product = mc4gt[5]  
          if string.len(imei)==15 then
          ok = true 
         end
