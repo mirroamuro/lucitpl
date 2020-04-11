@@ -54,9 +54,9 @@
         local ok = nil   
         local mc4gstr = nil
        if select == nil then
-         mc4gstr = luci.sys.exec('atcmd '..at)
+         mc4gstr = luci.sys.exec('/sbin/atcmd '..at)
         else
-         mc4gstr = luci.sys.exec('atcmd '..at..' 1')
+         mc4gstr = luci.sys.exec('/sbin/atcmd '..at..' 1')
         end
         if mc4gstr ~= nil then
          
