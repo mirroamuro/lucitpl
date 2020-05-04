@@ -6,13 +6,13 @@
 
 <%+header%>
 
-<form method="post" action="<%=pcdata(FULL_REQUEST_URI)%>">
-	<%- if fuser then %>
-		<div class="alert-message warning">
-			<p><%:Invalid username and/or password! Please try again.%></p>
-		</div>
-	<% end -%>
+<%- if fuser then %>
+	<div class="alert-message warning">
+		<p><%:Invalid username and/or password! Please try again.%></p>
+	</div>
+<% end -%>
 
+<form method="post" action="<%=pcdata(FULL_REQUEST_URI)%>">
 	<div class="cbi-map">
 		<h2 name="content"><%:Authorization Required%></h2>
 		<div class="cbi-map-descr">
@@ -40,7 +40,7 @@
 	</div>
 </form>
 <script type="text/javascript">//<![CDATA[
-	var input = document.getElementsByName('luci_password')[0];
+	var input = document.getElementsByName('luci_username')[0];
 	if (input)
 		input.focus();
 //]]></script>
