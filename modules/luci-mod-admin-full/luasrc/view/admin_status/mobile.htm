@@ -13,8 +13,6 @@
         isp['46009'] = 'China Unicom'
         isp['46011'] = 'China Telecom'
         isp['46020'] = 'China Tietong'
-
-
          
         ifaces  = {}
         function copstoisp(cops)
@@ -46,7 +44,8 @@
         function csqtosignle(csq)
         if csq == '-' or csq == nil then return nil end
         local signle = 0
-        signle = tonumber(csq)*100 / 3200   
+        csq = string.split(csq,",")
+        signle = tonumber(csq[1])*100 / 3200   
         signle = math.ceil(signle*100)
         return signle
         end
