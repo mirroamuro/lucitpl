@@ -257,7 +257,7 @@ msgid "Address to access local relay bridge"
 msgstr "Bridge Address"
 
 msgid "Administration"
-msgstr "System"
+msgstr "Administration"
 
 msgid "Advanced Settings"
 msgstr "Advance"

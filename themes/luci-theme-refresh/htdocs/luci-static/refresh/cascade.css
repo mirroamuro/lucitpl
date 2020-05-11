@@ -434,6 +434,11 @@ html body.apply-overlay-active{height:calc(100vh - 63px)}
 .page_status_overview .cbi-section:nth-child(7) .table .tr:nth-child(4)
 {display:none;}
 
+.page_status_overview .system-cbi-section:nth-child(7) .table .tr:nth-child(2),
+.page_status_overview .system-cbi-section:nth-child(7) .table .tr:nth-child(3),
+.page_status_overview .system-cbi-section:nth-child(7) .table .tr:nth-child(4)
+{display:none;}
+
 .page_status_overview .table{margin-bottom:0;}
 .page_status_overview .cbi-section{margin-bottom:20px;}
 .page_status_overview .cbi-section h3{margin-bottom:10px;}

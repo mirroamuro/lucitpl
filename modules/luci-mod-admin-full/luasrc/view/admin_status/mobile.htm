@@ -2,29 +2,44 @@
         local style = true
         local isp  = {}
         isp['46000'] = 'China Mobile'
-        isp['46007'] = 'China Mobile TD-SCDMA'
         isp['46001'] = 'China Unicom'
-        isp['46006'] = 'China Unicom' 
+        isp['46002'] = 'China Mobile'
+        isp['46003'] = 'China Telecom'
+        isp['46004'] = 'China Unknown'
         isp['46005'] = 'China Telecom'
+        isp['46006'] = 'China Unicom'
+        isp['46007'] = 'China Mobile TD-SCDMA'
+        isp['46008'] = 'China Mobile'
+        isp['46009'] = 'China Unicom'
         isp['46011'] = 'China Telecom'
-        isp['46005'] = 'China Unkonw'
-         
+        isp['46020'] = 'China Tietong'
+
+
          
         ifaces  = {}
         function copstoisp(cops)
         local str = tostring(cops)
         local nf = string.find(str,'46')
         if nf ~=nil then
-         return isp[str]
+         if isp[str] ~=nil then
+             return isp[str]
+         else
+             return 'China Unknown'
+         end
         end
-        return cops
+         return cops
         end
-        
+
         function readFile(fileName)
-        local f = assert(io.open(fileName,'r'))
-        local content = f:read('*all')
-        f:close()
-        return content
+          local file = io.open(fileName, "rb")
+          if file then file:close() end
+          if file ~= nil then
+            local f = assert(io.open(fileName,'r'))
+            local content = f:read('*all')
+            f:close()
+            return content
+          end
+            return ''
         end
 
 
@@ -80,7 +95,7 @@
          cops =   mc4gt[3]  
          csq =    mc4gt[4]  
          product = mc4gt[5]  
-         if string.len(imei)==15 then
+         if string.len(imei)==15 and string.len(iccid)<=20 then
          ok = true 
         end
         end
@@ -162,8 +177,6 @@
         end  
         end ) 
 
-
-	
 
 -%>
 
